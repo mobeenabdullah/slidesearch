@@ -4,7 +4,7 @@
 	// var fd = new FormData();
 	// fd.append('action', 'slidesearch_upload_slides');
 	var fileUploader = $("#slidesearch-fileuploader").uploadFile({
-		url: slidsearch.ajaxurl + '?action=slidesearch_upload_slides',
+		url: slidsearch.ajaxurl,
 		fileName: "slidesearchFile",
 		sequential: true,
 		sequentialCount: 1,
@@ -20,6 +20,7 @@
 		// },
 		extraHTML:function() {
 			var html = "<div>"
+					html += "<input type='hidden' name='action' value='slidesearch_upload_slides' />";
 					html += "<label for='tags' style='display: block'>File Tags:</label><input type='text' name='tags' value='' />";
 					html += "<button class='button' onclick='fillTags()'>Fill Tags</button>";
 					html += "</div>";
@@ -43,10 +44,10 @@
 			// return true;
 		},
 		onSuccess:function(files,data,xhr,pd) {
-			console.log('>> onSuccess', files );
-			console.log('>> onSuccess', data );
-			console.log('>> onSuccess', xhr );
-			console.log('>> onSuccess', pd );
+			console.log('>> onSuccess files', files );
+			console.log('>> onSuccess data', data );
+			console.log('>> onSuccess xhr', xhr );
+			console.log('>> onSuccess pd', pd );
 		},
 		afterUploadAll:function(obj) {
 			// console.log('>> afterUploadAll', obj );

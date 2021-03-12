@@ -19,7 +19,7 @@
 
     <div class="slidesearch">
         <div id="slidesearch-fileuploader">Select Files</div>
-        <button class="button button-primary" id="start-uploading">Upload Files</button>
+        <!--<button class="button button-primary" id="start-uploading">Upload Files</button>-->
     </div>
 
 <!--    <form class="slidesearch-file-uploader" enctype="multipart/form-data">-->

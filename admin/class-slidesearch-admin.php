@@ -133,30 +133,27 @@ class Slidesearch_Admin {
 	}
 
 	public function slidesearch_upload_slides() {
-	    $response = array();
-
-	    if ( !file_exists($_FILES['files']['tmp_name']) ) {
-            $response['success'] = false;
-            $response['error'] = 'No File Selected';
-        }
-
-		if ( is_array( $_FILES['files'] ) ) {
-            for($i = 0; $i < count($_FILES['file']['name']); $i++) {
-                print_r($_FILES['files']['name'][$i]);
+        $ret = array();
+        $error = $_FILES["slidesearchFile"]["error"];
+        //You need to handle  both cases
+        if( !is_array($_FILES["slidesearchFile"]["name"]) ) {
+            $fileName = $_FILES["slidesearchFile"]["name"];
+            $upload = wp_upload_bits($_FILES["slidesearchFile"]["name"], null, file_get_contents($_FILES["slidesearchFile"]["tmp_name"]));
+            $ret[]= $fileName;
+            $ret[]['upload'] = $upload;
+        } else {
+            $fileCount = count($_FILES["slidesearchFile"]["name"]);
+            for($i=0; $i < $fileCount; $i++)
+            {
+                $fileName = $_FILES["slidesearchFile"]["name"][$i];
+                $upload = wp_upload_bits($_FILES["slidesearchFile"]["name"], null, file_get_contents($_FILES["slidesearchFile"]["tmp_name"]));
+                $ret[]= $fileName;
+                $ret[]['upload'] = $upload;
             }
 
-            $response['success'] = true;
         }
-
-//		$upload = wp_upload_bits($_FILES["files"]["name"], null, file_get_contents($_FILES["files"]["tmp_name"]));
-//		echo json_encode($upload);
-        wp_send_json($response);
-//		$acceptedTypes = array('.ppt', '.pptx');
-//		if (in_array($_FILES['file']['type'], $acceptedTypes)) {
-//			$upload = wp_upload_bits($_FILES["file"]["name"], null, file_get_contents($_FILES["file"]["tmp_name"]));
-//			//$upload['url'] will gives you uploaded file path
-//		}
-
+        echo json_encode($ret);
+        wp_die();
 	}
 
 }
