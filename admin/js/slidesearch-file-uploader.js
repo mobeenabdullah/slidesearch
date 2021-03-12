@@ -18,6 +18,7 @@
 		// dynamicFormData: function() {
 		// 	return fd
 		// },
+		uploadButtonClass: 'button button-primary file-upload-button',
 		extraHTML:function() {
 			var html = "<div class='add-tags'>"
 					html += "<input type='hidden' name='action' value='slidesearch_upload_slides' />";

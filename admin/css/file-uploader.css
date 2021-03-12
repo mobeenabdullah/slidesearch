@@ -21,7 +21,7 @@
     vertical-align:middle;
 }
 .ajax-file-upload-progress {
-    margin: 10px 0 5px;
+    margin: 10px;
     position: relative;
     color: #FFFFFF;
     background: #ddd;
@@ -76,12 +76,15 @@
 .ajax-file-upload-error {
     display: block;
 }
+.file-upload-button {
+    margin-right: 10px !important;
+}
 .ajax-file-upload {
     font-size: 16px;
     font-weight: bold;
     cursor:pointer;
-    line-height:20px;
-    margin-right:10px;
+    line-height: 20px;
+    margin-right: 10px;
     display: inline-block;
     text-decoration: none;
     border-radius: 3px;
