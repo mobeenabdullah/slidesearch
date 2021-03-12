@@ -2,8 +2,8 @@
     box-sizing: border-box;
 }
 .ajax-file-upload-statusbar {
-    margin-top: 10px;
-    padding: 10px 10px;
+    margin-top: 15px;
+    padding: 20px;
     width: 100% !important;
     background: #ffffff;
     box-shadow: 0 0 5px 0px rgba(0,0,0,0.2);
