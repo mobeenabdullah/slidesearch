@@ -6,7 +6,7 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       https://mobeenabdullah.com
+ * @link       #
  * @since      1.0.0
  *
  * @package    Slidesearch
@@ -22,7 +22,7 @@
  * @since      1.0.0
  * @package    Slidesearch
  * @subpackage Slidesearch/includes
- * @author     Mobeen Abdullah <mobeenabdullah@gmail.com>
+ * @author     Mobeen Abdullah <mobeen.abdullah@gmail.com>
  */
 class Slidesearch_i18n {
 

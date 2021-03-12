@@ -3,7 +3,7 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       https://mobeenabdullah.com
+ * @link       #
  * @since      1.0.0
  *
  * @package    Slidesearch
@@ -19,7 +19,7 @@
  *
  * @package    Slidesearch
  * @subpackage Slidesearch/includes
- * @author     Mobeen Abdullah <mobeenabdullah@gmail.com>
+ * @author     Mobeen Abdullah <mobeen.abdullah@gmail.com>
  */
 class Slidesearch_Loader {
 

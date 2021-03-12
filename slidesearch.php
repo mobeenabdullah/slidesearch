@@ -16,6 +16,8 @@
  * Plugin Name:       Slide Search
  * Plugin URI:        https://itspublic.nl
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Plugin Name:       slidesearch
+ * Description:       Custom elastic search plugin to index and search slides.
  * Version:           1.0.0
  * Author:            Mobeen Abdullah
  * Author URI:        https://mobeenabdullah.com

@@ -3,7 +3,7 @@
 /**
  * Fired during plugin activation
  *
- * @link       https://mobeenabdullah.com
+ * @link       #
  * @since      1.0.0
  *
  * @package    Slidesearch
@@ -18,7 +18,7 @@
  * @since      1.0.0
  * @package    Slidesearch
  * @subpackage Slidesearch/includes
- * @author     Mobeen Abdullah <mobeenabdullah@gmail.com>
+ * @author     Mobeen Abdullah <mobeen.abdullah@gmail.com>
  */
 class Slidesearch_Activator {
 

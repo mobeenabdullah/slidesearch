@@ -25,7 +25,7 @@
  * @since      1.0.0
  * @package    Slidesearch
  * @subpackage Slidesearch/includes
- * @author     Mobeen Abdullah <mobeenabdullah@gmail.com>
+ * @author     Mobeen Abdullah <mobeen.abdullah@gmail.com>
  */
 class Slidesearch {
 
@@ -47,6 +47,15 @@ class Slidesearch {
 	 * @var      string    $plugin_name    The string used to uniquely identify this plugin.
 	 */
 	protected $plugin_name;
+
+	/**
+	 * The localized data for the file uploader
+	 *
+	 * @since    1.0.0
+	 * @access   public
+	 * @var      array    $localize_data    The array of blobal variables for the file-uploader.js.
+	 */
+	public $localize_data;
 
 	/**
 	 * The current version of the plugin.
@@ -73,6 +82,11 @@ class Slidesearch {
 			$this->version = '1.0.0';
 		}
 		$this->plugin_name = 'slidesearch';
+
+		// localized variables
+		$this->localize_data = array(
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		);
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -152,11 +166,20 @@ class Slidesearch {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Slidesearch_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Slidesearch_Admin(
+			$this->get_plugin_name(),
+			$this->get_version(),
+			$this->get_localized_data()
+		);
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
+		// load admin page, create admin page
+		$this->loader->add_action( 'admin_menu', $plugin_admin, 'create_admin_menu' );
+		// upload action
+		$this->loader->add_action( 'wp_ajax_slidesearch_upload_slides', $plugin_admin, 'slidesearch_upload_slides' );
+		$this->loader->add_action( 'wp_ajax_nopriv_slidesearch_upload_slides', $plugin_admin, 'slidesearch_upload_slides' );
 	}
 
 	/**
@@ -213,6 +236,16 @@ class Slidesearch {
 	 */
 	public function get_version() {
 		return $this->version;
+	}
+
+	/**
+	 * Retrieve the localized data of the plugin.
+	 *
+	 * @since     1.0.0
+	 * @return    array    The array of key value pair for localized data
+	 */
+	public function get_localized_data() {
+		return $this->localize_data;
 	}
 
 }
