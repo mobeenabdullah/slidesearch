@@ -9,9 +9,9 @@
 		sequential: true,
 		sequentialCount: 1,
 		acceptFiles:".ppt, .pptx",
-		showDone: true,
+		// showDone: true,
 		showDelete: true,
-		showDownload: true,
+		// showDownload: true,
 		showAbort: true,
 		// formdata: fd,
 		// autoSubmit: false,
@@ -19,10 +19,10 @@
 		// 	return fd
 		// },
 		extraHTML:function() {
-			var html = "<div>"
+			var html = "<div class='add-tags'>"
 					html += "<input type='hidden' name='action' value='slidesearch_upload_slides' />";
-					html += "<label for='tags' style='display: block'>File Tags:</label><input type='text' name='tags' value='' />";
-					html += "<button class='button' onclick='fillTags()'>Fill Tags</button>";
+					html += "<label for='tags'>Add Tags:</label><input type='text' name='tags' value='' />";
+					html += "<button class='button button-primary' onclick='fillTags()'>Add Tags</button>";
 					html += "</div>";
 			return html;
 		},
