@@ -64,5 +64,10 @@
 }
 .button-update {
     background-color: #27a29b !important;
-
+    border-color: #27a29b !important;
+    color: #fff !important;
+}
+.button-update:hover {
+    background-color: #0e8982 !important;
+    border-color: #0e8982 !important;
 }
