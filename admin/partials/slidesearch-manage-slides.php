@@ -42,13 +42,13 @@
             <div class="slide-actions">
                 <ul>
                     <li>
-                        <a href="#"><i class="fa fa-download"></i> Download Slide</a>
+                        <a href="#" class="button button-primary"><i class="fa fa-download"></i> Download Slide</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-tags"></i> Update Tags</a>
+                        <a href="#" class="button button-secondary"><i class="fa fa-tags"></i> Update Tags</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-close"></i> Delete Slide</a>
+                        <a href="#" class="button button-delete"><i class="fa fa-close"></i> Delete Slide</a>
                     </li>
                 </ul>
             </div>

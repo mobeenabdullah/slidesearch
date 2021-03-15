@@ -51,3 +51,18 @@
 .slides-listing .slide-actions ul li {
     display: inline-block;
 }
+
+/* Button Styling */
+.button-delete {
+    background-color: #cf4436 !important;
+    border-color: #cf4436 !important;
+    color: #fff !important;
+}
+.button-delete:hover {
+    background-color: #ba3d31 !important;
+    border-color: #ba3d31 !important;
+}
+.button-update {
+    background-color: #27a29b !important;
+
+}
