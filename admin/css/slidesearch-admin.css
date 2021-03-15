@@ -71,3 +71,51 @@
     background-color: #0e8982 !important;
     border-color: #0e8982 !important;
 }
+
+.tagsFieldWrap {
+    display: none;
+}
+.showTags {
+    display: block;
+}
+.ajax-file-upload-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+}
+.ajax-file-upload-statusbar {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0 !important;
+}
+
+.ajax-file-upload-filename, .extrahtml, .ajax-file-upload-progress  {
+    width: 100%;
+}
+.ajax-file-upload-progress, .ajax-file-upload-bar {
+    height: 8px;
+}
+.ajax-file-upload-filename {
+    margin-bottom: 15px;
+}
+.tagsinput {
+    margin-bottom: 15px;
+}
+
+@media (min-width: 600px) {
+    .ajax-file-upload-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .ajax-file-upload-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .ajax-file-upload-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
