@@ -2,3 +2,52 @@
  * All of the CSS for your admin-specific functionality should be
  * included in this file.
  */
+
+/* Slides Listing */
+.slides-listing {}
+.slides-listing .single-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+}
+.slides-listing .single-slide .slide-content-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slides-listing .single-slide .slide-content-wrap .slide-icon {
+    position: relative;
+    margin-right: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+}
+.slides-listing .single-slide .slide-content-wrap .slide-icon:after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 0;
+    width: 1px;
+    height: 40px;
+    background-color: #eee;
+}
+.slides-listing .single-slide .slide-content-wrap .slide-info h4 {
+    margin: 0 0 5px 0;
+}
+.slides-listing .single-slide .slide-content-wrap .slide-info .slide-meta {
+    margin: 0;
+    list-style-type: none;
+}
+.slides-listing .single-slide .slide-content-wrap .slide-info .slide-meta li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.slides-listing .slide-actions ul {
+    margin: 0;
+    list-style-type: none;
+}
+.slides-listing .slide-actions ul li {
+    display: inline-block;
+}

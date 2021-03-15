@@ -22,8 +22,8 @@
 		extraHTML:function() {
 			var html = "<div class='add-tags'>"
 					html += "<input type='hidden' name='action' value='slidesearch_upload_slides' />";
-					html += "<label for='tags'>Add Tags:</label><input type='text' name='tags' value='' />";
-					html += "<button class='button button-primary' onclick='fillTags()'>Add Tags</button>";
+					html += "<label for='tags'>Add Tags:</label><input type='text' id='slideTagsInput' name='tags' value='tag1,tag2,tag3' />";
+					html += "<button class='button button-primary' onclick='fillTags()'><i class='fa fa-plus'></i> Add Tags</button>";
 					html += "</div>";
 			return html;
 		},
@@ -49,6 +49,7 @@
 			console.log('>> onSuccess data', data );
 			console.log('>> onSuccess xhr', xhr );
 			console.log('>> onSuccess pd', pd );
+			$('#slideTagsInput').tagsInput();
 		},
 		afterUploadAll:function(obj) {
 			// console.log('>> afterUploadAll', obj );

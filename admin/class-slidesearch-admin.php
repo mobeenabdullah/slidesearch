@@ -84,8 +84,16 @@ class Slidesearch_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/slidesearch-admin.css', array(), $this->version, 'all' );
+		// file uploader css
 		wp_enqueue_style( $this->plugin_name . 'jquery-file-uploader', plugin_dir_url( __FILE__ ) . 'css/file-uploader.css', array(), $this->version, 'all' );
+
+		// fontawesome cdn
+		wp_enqueue_style( $this->plugin_name . 'fontawesome',  'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), $this->version, 'all' );
+
+		// tags input revisited css
+        wp_enqueue_style( $this->plugin_name . 'tagsinput-revisited', plugin_dir_url( __FILE__ ) . 'css/jquery.tagsinput-revisited.css', array(), $this->version, 'all' );
+
+        wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/slidesearch-admin.css', array(), $this->version, 'all' );
 	}
 
 	/**
@@ -107,13 +115,16 @@ class Slidesearch_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/slidesearch-admin.js', array( 'jquery' ), $this->version, false );
-
 		// file uploader js
 		wp_enqueue_script( $this->plugin_name . 'jquery-file-uploader', plugin_dir_url( __FILE__ ) . 'js/jquery.uploadfile.js', array( 'jquery' ), $this->version, true );
 		wp_register_script( $this->plugin_name . 'file-uploader', plugin_dir_url( __FILE__ ) . 'js/slidesearch-file-uploader.js', array( 'jquery' ), $this->version, true );
 		wp_localize_script( $this->plugin_name . 'file-uploader', 'slidsearch', $this->localize_data );
 		wp_enqueue_script( $this->plugin_name . 'file-uploader' );
+
+		// tags input
+        wp_enqueue_script( $this->plugin_name . 'tagsinput-revisited', plugin_dir_url( __FILE__ ) . 'js/jquery.tagsinput-revisited.js', array( 'jquery' ), $this->version, true );
+
+        wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/slidesearch-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
 
