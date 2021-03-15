@@ -15,24 +15,9 @@
 
 <div class="wrap">
 
-    <h2>Manage Slides</h2>
-
-    <div class="slidesearch">
-        <div id="slidesearch-fileuploader">Select Files</div>
-        <!--<button class="button button-primary" id="start-uploading">Upload Files</button>-->
-    </div>
-
-<!--    <form class="slidesearch-file-uploader" enctype="multipart/form-data">-->
-<!--        <div class="drop-files">Drop files here</div>-->
-<!--        <div class="file-input-wrap">-->
-<!--            <input class="file-input" type="file" name="files[]" id="slidesearch-file" multiple/>-->
-<!--            <div class="button-wrap">-->
-<!--                <label for="slidesearch-file" class="button-primary button">Select Files</label>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </form>-->
-<!---->
-<!--    <div class="files-list" id="files-list"></div>-->
+    <h2>Manage Slides <a href="#" class="page-title-action">Upload</a></h2>
+    <hr>
+    <br>
 
     <div class="slides-listing">
 

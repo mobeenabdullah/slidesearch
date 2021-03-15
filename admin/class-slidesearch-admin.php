@@ -135,7 +135,8 @@ class Slidesearch_Admin {
 			__( 'Slide Search', $this->plugin_name ),
 			'manage_options',
 			$this->plugin_name . '-manage-slides',
-			array( $this, 'include_admin_menu_page_partial' )
+			array( $this, 'include_admin_menu_page_partial' ),
+            'dashicons-images-alt2'
 		);
 	}
 
@@ -166,5 +167,21 @@ class Slidesearch_Admin {
         echo json_encode($ret);
         wp_die();
 	}
+
+	// Upload Slides
+    public function upload_slides_page() {
+        add_submenu_page(
+            $this->plugin_name . '-manage-slides',
+            __( 'Upload Slides',  $this->plugin_name ),
+            __( 'Add Slides', $this->plugin_name ),
+            'manage_options',
+            $this->plugin_name . '-upload-slides',
+            array( $this, 'include_admin_upload_slides_page' )
+        );
+    }
+
+    public function include_admin_upload_slides_page() {
+        include( plugin_dir_path( __FILE__ ) . 'partials/slidesearch-upload-slides.php' );
+    }
 
 }

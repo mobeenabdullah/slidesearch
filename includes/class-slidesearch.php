@@ -175,8 +175,10 @@ class Slidesearch {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
-		// load admin page, create admin page
+		// creating admin pages
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'create_admin_menu' );
+        $this->loader->add_action( 'admin_menu', $plugin_admin, 'upload_slides_page' );
+
 		// upload action
 		$this->loader->add_action( 'wp_ajax_slidesearch_upload_slides', $plugin_admin, 'slidesearch_upload_slides' );
 		$this->loader->add_action( 'wp_ajax_nopriv_slidesearch_upload_slides', $plugin_admin, 'slidesearch_upload_slides' );
